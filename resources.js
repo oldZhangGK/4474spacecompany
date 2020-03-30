@@ -572,7 +572,7 @@ function upgradeMeteoriteStorage(){
 	}
 }
 
-function toggleCharcoal(){
+/*function toggleCharcoal(){
 	if(charcoalToggled === true){
 		charcoalToggled = false;
 		document.getElementById("charcoalToggled").innerHTML = "On";
@@ -581,7 +581,7 @@ function toggleCharcoal(){
 		charcoalToggled = true;
 		document.getElementById("charcoalToggled").innerHTML = "Off";
 	}
-}
+}*/
 
 function toggleHeater(){
 	if(heaterToggled === true){

@@ -164,6 +164,7 @@ function refreshPerSec(){
 	}
 	scienceps = (lab*labGain);
 	document.getElementById("scienceps").innerHTML = commafy(scienceps*10)/10;
+    document.getElementById("rocketFuelps").innerHTML = commafy(rocketFuelps*10)/10;
 	document.getElementById("plasmaps").innerHTML = commafy(plasmaps);
 	document.getElementById("plasma").className = "";
 	if(plasma <= 0){
@@ -306,6 +307,9 @@ function refreshPerSec(){
 	if(meteorite === 0){
 		document.getElementById("meteorite").className = "red";
 	}
+    if(rocketLaunched){
+        rocketFuel -= 5;
+    }
 
 }
 
@@ -333,10 +337,10 @@ function refreshUI(){
 		document.getElementById("heaterToggled").innerHTML = "On";
 	}
 	if(charcoalToggled === true){
-		document.getElementById("charcoalToggled").innerHTML = "Off";
+		//document.getElementById("charcoalToggled").innerHTML = "Off";
 	}
 	else{
-		document.getElementById("charcoalToggled").innerHTML = "On";
+		//document.getElementById("charcoalToggled").innerHTML = "On";
 	}
 	if(chemicalPlantToggled === true){
 		document.getElementById("chemicalPlantToggled").innerHTML = "Off";
@@ -675,7 +679,11 @@ function checkRedCost(){
 			turnRed(0 - charcoalEngine, 0, "charcoalps");
 		}
 	}
-	turnRed(woodps - (woodburner*2) - (furnace*furnaceWoodInput) - (kiln*45), 0, "woodps");
+    if(charcoalToggled === true && (charcoal < charcoalStorage)){
+        turnRed(woodps - (woodburner*2) - (furnace*furnaceWoodInput) - (kiln*45), 0, "woodps");
+    } else{
+        turnRed(woodps, 0, "woodps");
+    }
 	turnRed(spaceMetalps, 0, "spaceMetalps");
 	turnRed(methaneps - methaneStation*6, 0, "methaneps");
 	turnRed(lavaps - magmatic*11, 0, "lavaps");
@@ -1703,6 +1711,16 @@ function checkRedCost(){
 	else{
 		document.getElementById("techActivateGemCost").className = "";
 	}
+    if(rocket<1){
+        document.getElementById("launchRocketRocketCost").className = "red";
+    } else{
+        document.getElementById("launchRocketRocketCost").className = "";
+    }
+    if(rocketFuelps < 5){
+        document.getElementById("launchRocketRocketFuelpsCost").className = "red";
+    } else{
+        document.getElementById("launchRocketRocketFuelpsCost").className = "";
+    }
 }
 
 
@@ -1910,10 +1928,10 @@ $('.collapseOuter').click(function(){
     }
 });
 
-function updateTheme(){
+/*function updateTheme(){
 	currentTheme = document.getElementById("themeSelector").options[themeSelector.selectedIndex].value;
     document.getElementById('theme_css').href = 'styles/'+currentTheme+'-bootstrap.min.css';
-};
+};*/
 
 window.onload = function(){
 	load('local');

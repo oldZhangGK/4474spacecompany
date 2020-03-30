@@ -407,6 +407,7 @@ function load(type){
 		//var savegame = JSON.parse(localStorage.getItem("newSave"));
 		var savegame = JSON.parse(localStorage.getItem("save"));
 	}
+    charcoalToggled = true;
 	if(type === "import"){
 		var compressed = document.getElementById('impexpField').value;
 		var decompressed = LZString.decompressFromBase64(compressed);
@@ -718,7 +719,7 @@ function load(type){
 		if(typeof savegame.freezerSiliconCost !== "undefined") freezerSiliconCost = savegame.freezerSiliconCost;
 
 	}
-	if(currentTheme === "base"){
+	/*if(currentTheme === "base"){
 		document.getElementById("themeSelector").selectedIndex = 0;
 	}
 	if(currentTheme === "cyborg"){
@@ -730,7 +731,7 @@ function load(type){
 	if(currentTheme === "united"){
 		document.getElementById("themeSelector").selectedIndex = 3;
 	}
-	updateTheme();
+	updateTheme();*/
 	refreshUI();
 	refreshStats();
 	refreshResources();

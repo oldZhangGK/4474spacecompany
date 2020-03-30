@@ -13,6 +13,7 @@ function getChemicalPlant(){
 		document.getElementById("chemicalPlantMetalCost").innerHTML = commafy(chemicalPlantMetalCost);
 		document.getElementById("chemicalPlantGemCost").innerHTML = commafy(chemicalPlantGemCost);
 		document.getElementById("chemicalPlantOilCost").innerHTML = commafy(chemicalPlantOilCost);
+        rocketFuelps += 0.2;
 		refresh();
 		refreshPerSec();
 	}
@@ -30,7 +31,7 @@ function getRocket(){
 }
 
 function launchRocket(){
-	if(rocket >= 1 && rocketFuel >= 20){
+	if(rocket >= 1 && rocketFuelps >= 5){
 		rocketFuel -= 20;
 		rocket -= 1;
 		document.getElementById("spaceRocket").className = "hidden";
