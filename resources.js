@@ -348,6 +348,9 @@ function upgradeUraniumStorage(){
 		document.getElementById("uraniumStorageCost").innerHTML = commafy(uraniumStorage);
 		document.getElementById("uraniumStorageSpaceMetalCost").innerHTML = commafy(uraniumStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeOilStorage(){
@@ -362,6 +365,9 @@ function upgradeOilStorage(){
 		document.getElementById("oilStorageCost").innerHTML = commafy(oilStorage);
 		document.getElementById("oilStorageMetalCost").innerHTML = commafy(oilStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeMetalStorage(){
@@ -373,6 +379,9 @@ function upgradeMetalStorage(){
 		document.getElementById("metalStorage").innerHTML = commafy(metalStorage);
 		document.getElementById("metalNextStorage").innerHTML = commafy(metalNextStorage);
 		document.getElementById("metalStorageCost").innerHTML = commafy(metalStorage);
+	}
+	else{
+		noEnough();
 	}
 }
 
@@ -388,6 +397,9 @@ function upgradeGemStorage(){
 		document.getElementById("gemStorageCost").innerHTML = commafy(gemStorage);
 		document.getElementById("gemStorageMetalCost").innerHTML = commafy(gemStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeCharcoalStorage(){
@@ -401,6 +413,9 @@ function upgradeCharcoalStorage(){
 		document.getElementById("charcoalNextStorage").innerHTML = commafy(charcoalNextStorage);
 		document.getElementById("charcoalStorageCost").innerHTML = commafy(charcoalStorage);
 		document.getElementById("charcoalStorageMetalCost").innerHTML = commafy(charcoalStorage/2.5);
+	}
+	else{
+		noEnough();
 	}
 }
 
@@ -416,6 +431,9 @@ function upgradeWoodStorage(){
 		document.getElementById("woodStorageCost").innerHTML = commafy(woodStorage);
 		document.getElementById("woodStorageMetalCost").innerHTML = commafy(woodStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeSpaceMetalStorage(){
@@ -429,6 +447,9 @@ function upgradeSpaceMetalStorage(){
 		document.getElementById("spaceMetalNextStorage").innerHTML = commafy(spaceMetalNextStorage);
 		document.getElementById("spaceMetalStorageCost").innerHTML = commafy(spaceMetalStorage);
 		document.getElementById("spaceMetalStorageMetalCost").innerHTML = commafy(spaceMetalStorage*4);
+	}
+	else{
+		noEnough();
 	}
 }
 
@@ -444,6 +465,9 @@ function upgradeMethaneStorage(){
 		document.getElementById("methaneStorageCost").innerHTML = commafy(methaneStorage);
 		document.getElementById("methaneStorageSpaceMetalCost").innerHTML = commafy(methaneStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeTitaniumStorage(){
@@ -457,6 +481,9 @@ function upgradeTitaniumStorage(){
 		document.getElementById("titaniumNextStorage").innerHTML = commafy(titaniumNextStorage);
 		document.getElementById("titaniumStorageCost").innerHTML = commafy(titaniumStorage);
 		document.getElementById("titaniumStorageSpaceMetalCost").innerHTML = commafy(titaniumStorage/2.5);
+	}
+	else{
+		noEnough();
 	}
 }
 
@@ -472,6 +499,9 @@ function upgradeGoldStorage(){
 		document.getElementById("goldStorageCost").innerHTML = commafy(goldStorage);
 		document.getElementById("goldStorageSpaceMetalCost").innerHTML = commafy(goldStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeSilverStorage(){
@@ -485,6 +515,9 @@ function upgradeSilverStorage(){
 		document.getElementById("silverNextStorage").innerHTML = commafy(silverNextStorage);
 		document.getElementById("silverStorageCost").innerHTML = commafy(silverStorage);
 		document.getElementById("silverStorageSpaceMetalCost").innerHTML = commafy(silverStorage/2.5);
+	}
+	else{
+		noEnough();
 	}
 }
 
@@ -500,6 +533,9 @@ function upgradeSiliconStorage(){
 		document.getElementById("siliconStorageCost").innerHTML = commafy(siliconStorage);
 		document.getElementById("siliconStorageSpaceMetalCost").innerHTML = commafy(siliconStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeLavaStorage(){
@@ -513,6 +549,9 @@ function upgradeLavaStorage(){
 		document.getElementById("lavaNextStorage").innerHTML = commafy(lavaNextStorage);
 		document.getElementById("lavaStorageCost").innerHTML = commafy(lavaStorage);
 		document.getElementById("lavaStorageSpaceMetalCost").innerHTML = commafy(lavaStorage/2.5);
+	}
+	else{
+		noEnough();
 	}
 }
 
@@ -528,6 +567,9 @@ function upgradeHydrogenStorage(){
 		document.getElementById("hydrogenStorageCost").innerHTML = commafy(hydrogenStorage);
 		document.getElementById("hydrogenStorageSpaceMetalCost").innerHTML = commafy(hydrogenStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeHeliumStorage(){
@@ -541,6 +583,9 @@ function upgradeHeliumStorage(){
 		document.getElementById("heliumNextStorage").innerHTML = commafy(heliumNextStorage);
 		document.getElementById("heliumStorageCost").innerHTML = commafy(heliumStorage);
 		document.getElementById("heliumStorageSpaceMetalCost").innerHTML = commafy(heliumStorage/2.5);
+	}
+	else{
+		noEnough();
 	}
 }
 
@@ -556,6 +601,9 @@ function upgradeIceStorage(){
 		document.getElementById("iceStorageCost").innerHTML = commafy(iceStorage);
 		document.getElementById("iceStorageSpaceMetalCost").innerHTML = commafy(iceStorage/2.5);
 	}
+	else{
+		noEnough();
+	}
 }
 
 function upgradeMeteoriteStorage(){
@@ -569,6 +617,9 @@ function upgradeMeteoriteStorage(){
 		document.getElementById("meteoriteNextStorage").innerHTML = commafy(meteoriteNextStorage);
 		document.getElementById("meteoriteStorageCost").innerHTML = commafy(meteoriteStorage);
 		document.getElementById("meteoriteStorageSpaceMetalCost").innerHTML = commafy(meteoriteStorage*4);
+	}
+	else{
+		noEnough();
 	}
 }
 
@@ -634,6 +685,10 @@ function getCharcoalEngine(){
 	if(metal >= charcoalEngineMetalCost && gem >= charcoalEngineGemCost){
 		metal -= charcoalEngineMetalCost;
 		gem -= charcoalEngineGemCost;
+		if (charcoalEngine==0){
+			notify("Energy");
+			document.getElementById("energyTab").querySelector("h2").style.color="green";
+		}
 		charcoalEngine += 1;
 		charcoalEngineMetalCost = Math.floor(50 * Math.pow(1.1,charcoalEngine));
 		charcoalEngineGemCost = Math.floor(25 * Math.pow(1.1,charcoalEngine));
@@ -791,9 +846,14 @@ function getEnricher(){
 }
 
 function getPump(){
+	
 	if(metal >= pumpMetalCost && gem >= pumpGemCost){
 		metal -= pumpMetalCost;
 		gem -= pumpGemCost;
+		if (pump==0){
+			notify("oil");
+			document.getElementById("oilTab").querySelector("h2").style.color="green";
+		}
 		pump += 1;
 		pumpMetalCost = Math.floor(60 * Math.pow(1.1,pump));
 		pumpGemCost = Math.floor(20 * Math.pow(1.1,pump));
@@ -844,10 +904,36 @@ function getOilField(){
 	}
 }
 
+function noEnough(){
+	PNotify.prototype.options.styling = "bootstrap3";
+	new PNotify({
+		title: "not enough resource",
+		type: 'info',
+		animation: 'fade',
+		animate_speed: 'fast',
+		addclass: "stack-bottomright"
+	});
+}
+
+function notify(title){
+	PNotify.prototype.options.styling = "bootstrap3";
+	new PNotify({
+		title: title+" is being mined",
+		type: 'info',
+		animation: 'fade',
+		animate_speed: 'fast',
+		addclass: "stack-bottomright"
+	});
+}
+
 function getMiner(){
 	if(metal >= minerMetalCost && wood >= minerWoodCost){
 		metal -= minerMetalCost;
 		wood -= minerWoodCost;
+		if (miner==0){
+			notify("Metal");
+			document.getElementById("metalTab").querySelector("h2").style.color="green";
+		}
 		miner += 1;
 		minerWoodCost = Math.floor(5 * Math.pow(1.1,miner));
 		minerMetalCost = Math.floor(10 * Math.pow(1.1,miner));
@@ -909,9 +995,14 @@ function getGigaDrill(){
 }
 
 function getGemMiner(){
+
 	if(metal >= gemMinerMetalCost && gem >= gemMinerGemCost){
 		metal -= gemMinerMetalCost;
 		gem -= gemMinerGemCost;
+		if (gemMiner==0){
+			notify("Gem");
+			document.getElementById("gemTab").querySelector("h2").style.color="green";
+		}
 		gemMiner += 1;
 		gemMinerGemCost = Math.floor(10 * Math.pow(1.1,gemMiner));
 		gemMinerMetalCost = Math.floor(15 * Math.pow(1.1,gemMiner));
@@ -963,9 +1054,14 @@ function getDiamondDrill(){
 }
 
 function getWoodburner(){
+	
 	if(metal >= woodburnerMetalCost && wood >= woodburnerWoodCost){
 		metal -= woodburnerMetalCost;
 		wood -= woodburnerWoodCost;
+		if (woodburner==0){
+			notify("Charcoal");
+			document.getElementById("charcoalTab").querySelector("h2").style.color="green";
+		}
 		woodburner += 1;
 		woodburnerWoodCost = Math.floor(5 * Math.pow(1.1,woodburner));
 		woodburnerMetalCost = Math.floor(10 * Math.pow(1.1,woodburner));
@@ -1020,6 +1116,10 @@ function getWoodcutter(){
 	if(metal >= woodcutterMetalCost && wood >= woodcutterWoodCost){
 		metal -= woodcutterMetalCost;
 		wood -= woodcutterWoodCost;
+		if (woodcutter==0){
+			notify("Wood");
+			document.getElementById("woodTab").querySelector("h2").style.color="green";
+		}
 		woodcutter += 1;
 		woodcutterWoodCost = Math.floor(5 * Math.pow(1.1,woodcutter));
 		woodcutterMetalCost = Math.floor(10 * Math.pow(1.1,woodcutter));
